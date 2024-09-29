@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Login } from './components/Login';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Healthy Habits</Text>
+      <Text style={styles.subtitle}>Healthy food, healthy wallet</Text>
+      <Login/>
     </View>
   );
 }
@@ -17,4 +20,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  title: {
+    flex: 1
+  },
+
+  subtitle: {
+    flex: 1
+  },
+
+  login: {
+    flex: 2
+  }
 });
