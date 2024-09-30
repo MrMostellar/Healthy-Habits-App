@@ -14,48 +14,66 @@ export function Login(){
 
         userData === user && passwordData === password ?
             alert('Successfully logged in!') :
-            setIncorrectValue(<Text>Incorrect login information</Text>) 
+            setIncorrectValue(<Text style={styles.error}>Incorrect login information</Text>) 
     
     }
 
     return(
-        <View style={styles.login}>
-            <TextInput 
-                style={styles.textBox}
-                placeholder = 'Username'
-                onChangeText={setUser}
-            />
+        
+        <View style={styles.loginContainer}>
 
-            <TextInput 
-                placeholder = 'Password'                    onChangeText={setPassword}
-                style={styles.textBox}
-            />
+            <View style={styles.inputBoxes}>
+
+                <TextInput 
+                    style={styles.textBox}
+                    placeholder = 'Username'
+                    onChangeText = {setUser}
+                    textAlign = 'center'
+                />
+
+                <TextInput 
+                    style = {styles.textBox}
+                    placeholder = 'Password'                    
+                    onChangeText = {setPassword}
+                    secureTextEntry = {true}
+                    textAlign = 'center'
+                />
+
+            </View>
 
             <Button 
-                style={styles.button}
                 title="Log in"
                 onPress={authenticate}
             />
+
             <View>{incorrectValue}</View>
+
         </View>
+        
     );
 }
 
 const styles = StyleSheet.create({
-    login:{
-        alignItems: 'center',
-        justifyContent: 'space-around'
+    loginContainer:{
+        flex: 1,
+        justifyContent: 'space-evenly',
+        alignItems: 'center'
     },
+
+    textBoxes:{
+        flex: 1,
+    },
+
     textBox:{
-        borderRadius: 10,
         borderColor: 'grey',
         borderWidth: 1,
-        minWidth: '50%',
-        minHeight: '5%',
-        margin: 5,
-        padding: 5
+        borderRadius: 10,
+        minWidth: 175,
+        maxWidth: 175,
+        minHeight: 35,
+        maxHeight: 35,        
     },
-    button: {
-        padding: 5
+    error:{
+        color: 'red'
     }
-})
+});

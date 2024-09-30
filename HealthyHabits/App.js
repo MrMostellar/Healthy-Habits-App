@@ -9,9 +9,17 @@ export default function App() {
   return (
     <View style={styles.container}>
       
-      <Header/>
-      <Login/>
-      <Footer/>
+      <View style={styles.headerComponent}>
+        <Header/>
+      </View>
+
+      <View style={styles.loginComponent}>
+        <Login/>
+      </View>
+
+      <View style={styles.footerComponent}>
+        <Footer/>
+      </View>
 
     </View>
     
@@ -21,8 +29,28 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
+
+  headerComponent:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: 40
+},
+
+  loginComponent:{
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center', 
+},
+
+footerComponent:{
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 10
+},
 });

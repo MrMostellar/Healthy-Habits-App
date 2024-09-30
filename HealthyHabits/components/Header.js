@@ -3,32 +3,24 @@ import { View, Text, StyleSheet } from "react-native";
 
 export function Header(){
     return(
-        <View style={styles.header}>
-        
-            <View style={styles.headerComponent}>
-                <Text style={styles.title}>Healthy Habits</Text>
-            </View>
-        
-            <View style={styles.headerComponent}>
-                <Text style={styles.subtitle}>Healthy food, healthy wallet</Text>
-            </View>
-        
-        </View>
+        <View style={styles.headerContainer}>
+            <Text style={styles.title}>Healthy Habits</Text>
+            <Text style={styles.subtitle}>Healthy food, healthy wallet</Text>
+        </View>        
     );
 }
 
 const styles = StyleSheet.create({
-    header:{
+    headerContainer:{
         alignItems: 'center',
-        marginTop: 50
+        paddingTop: 50
     },
-    headerComponent:{
-        margin: 5,
-        
-    },
+
     title:{
-        fontSize: 30
+        padding: 10,
+        fontSize: 35
     },
+
     subtitle:{
         fontSize: 15
     }

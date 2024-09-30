@@ -3,23 +3,24 @@ import { View, Text, StyleSheet } from "react-native";
 
 export function Footer(){
     return(
-        <View style={styles.footer}>
-            <Text style={styles.footerComponent}>Footer</Text>
-            <Text style={styles.footerComponent}>More Text</Text>
+        <View style={styles.footerContainer}>
+            <Text style={styles.link}>More Text</Text>
+            <Text style={styles.link}>More Text</Text>
+            <Text style={styles.link}>More Text</Text>
+            <Text style={styles.link}>More Text</Text>
+            <Text style={styles.link}>More Text</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    footer:{
-        alignItems: 'center',
-        justifyContent: 'center',
+    footerContainer: {
+        flex: 1,
         flexDirection: 'row',
-        marginTop: 10,
-        marginBottom: 10
+        justifyContent: 'space-around',
+        alignItems: 'center',
     },
-    footerComponent: {
-        marginLeft: 5,
-        marginRight: 5
+    link: {
+        padding: 5,
     }
 });
