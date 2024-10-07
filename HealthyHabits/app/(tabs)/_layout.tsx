@@ -2,22 +2,23 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Home(){
+export default function TabLayout(){
     return(
         <Tabs screenOptions={{
-                tabBarActiveBackgroundColor: "#D8EFD3",
-                tabBarInactiveBackgroundColor: "#F1F8E8",
+                tabBarActiveBackgroundColor: "#66666f",
+                tabBarInactiveBackgroundColor: "#fff",
                 headerTitleAlign: "center",
-                headerTransparent: true
-        }}>
-            <Tabs.Screen name="index" options={{
+                tabBarShowLabel: false,
+                }}>
+            <Tabs.Screen name="app" 
+            options={{
                 title: 'Home',
-                tabBarIcon: () => <Ionicons name="home"/>
+                tabBarIcon: () => <Ionicons name="home" size={30}/>
             }}/>
-            <Tabs.Screen name="settings" options={{
+            <Tabs.Screen name="settings" 
+            options={{
                 title: 'Settings',
-                tabBarIcon: () => <Ionicons name="settings"/>,
-
+                tabBarIcon: () => <Ionicons name="settings" size={30}/>,
             }}/>
         </Tabs>
     )
