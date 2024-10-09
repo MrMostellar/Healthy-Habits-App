@@ -7,6 +7,6 @@ export default function Index(){
   return(
     isSignedIn ? 
     <Redirect href={'/app'}/>:
-    <Redirect href={'/landingpage'}/>
+    <Redirect href={'/signin'}/>
   )
 }

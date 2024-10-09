@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, ScrollView} from "react-native";
+import { View, Text, TextInput, ScrollView} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SignUp(){
     return(
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView>
             <ScrollView>
                 <View>
                     <Text>Sign Up</Text>
@@ -13,15 +13,3 @@ export default function SignUp(){
         </SafeAreaView>
     )
 }
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#fff',
-        width: '100%',
-        height: '100%'
-    },
-    scrollview: {
-        backgroundColor: '#fff',
-        width: '100%',
-        height: '100%'
-    }
-})

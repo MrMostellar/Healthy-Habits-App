@@ -1,27 +1,39 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, ScrollView, } from "react-native";
+import { View, Text, TextInput, ScrollView, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Logo from "../../components/Logo";
+import InputBox from "../../components/InputBox";
 
 export default function SignIn(){
     return(
         <SafeAreaView>
             <ScrollView>
                 <View>
-                    <Text>Sign In</Text>
+                    <Logo/>
+                </View>
+                    
+                <View>
+                    <Text>Welcome to Healthy Habits!</Text>
+                </View>
+                    
+                <View>
+                    <Text>Healthy food, healthy budget, and a happy wallet!</Text>
+                </View>
+
+                <View>
+                    <View>
+                        <InputBox placeholder={'Username'}
+                            keyboardType={'default'}
+                            secure={false}/>
+                    </View>
+
+                    <View>
+                        <InputBox placeholder={'Password'}
+                            keyboardType={'default'}
+                            secure={true}/>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
     )
 }
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#fff',
-        width: '100%',
-        height: '100%'
-    },
-    scrollview: {
-        backgroundColor: '#fff',
-        width: '100%',
-        height: '100%'
-    }
-})
