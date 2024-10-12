@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "758526328821",
+    "project_id": "healthyhabits-51924",
+    "storage_bucket": "healthyhabits-51924.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758526328821:android:93ff33642eb322b099eabc",
+        "android_client_info": {
+          "package_name": "com.stellarTech.healthyHabits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758526328821-mp3skujj5igcu8s9volcc55fe5cojo7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stellarTech.healthyHabits",
+            "certificate_hash": "bae5f338372022565ef4be6994e2b7d119f224d5"
+          }
+        },
+        {
+          "client_id": "758526328821-r5gaqt68nn6r2ecrsnk6nej914g40uep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFw2Q2tVRiRtmDqhDXa5RqfaLfU26L4_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758526328821-r5gaqt68nn6r2ecrsnk6nej914g40uep.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "758526328821-0om8smkkh81jd3nh6qld58jkfk9k416l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stellarTech.healthyHabits"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

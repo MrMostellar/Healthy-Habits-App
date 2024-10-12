@@ -13,12 +13,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "googleServicesFile": "./GoogleService-Info.plist",
+      "googleServicesFile": "C:/Users/mrmos/OneDrive/Desktop/Healthy_Habits_App/GoogleService-Info.plist",
       "bundleIdentifier": "com.stellarTech.healthyHabits",
       "supportsTablet": true
     },
     "android": {
-      "googleServicesFile": "./google-services.json",
+      "googleServicesFile": "C:/Users/mrmos/OneDrive/Desktop/Healthy_Habits_App/google-services.json",
       "package": "com.stellarTech.healthyHabits",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",

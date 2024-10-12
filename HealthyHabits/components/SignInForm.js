@@ -1,5 +1,6 @@
-    import { View, Text } from "react-native"
+    import { View, Text, Pressable } from "react-native"
     import InputBox from "./InputBox"
+    import CustomButton from "./CustomButton"
     import { Link } from "expo-router"
     
     export default function SignInForm(props){
@@ -25,6 +26,11 @@
                         secure={true}
                     />
                 </View>
+                
+                <View>
+                    <CustomButton title={'Sign in'}/>
+                </View>
+                
                 <View className="items-center">
                     <Text>Don't have an account? <Link className="underline text-blue-700" href={'signup'}>Sign up!</Link></Text>
                 </View>
