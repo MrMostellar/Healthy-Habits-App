@@ -13,9 +13,13 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.stellarTech.healthyHabits",
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.stellarTech.healthyHabits",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +29,17 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       "expo-router"
     ]
   }
