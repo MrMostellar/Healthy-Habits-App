@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TextInput, ScrollView, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Logo from "../../components/Logo";
-import SignInForm from "../../components/SignInForm";
+import SignInOrUpForm from "../../components/SignInOrUpForm";
 
 export default function SignIn(){
     return(
@@ -18,7 +18,7 @@ export default function SignIn(){
                     </View>
                 </View>
 
-                <SignInForm/>                  
+                <SignInOrUpForm/>                  
             </View>
         </SafeAreaView>
     )
