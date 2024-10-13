@@ -1,6 +1,7 @@
 import { Stack, useRouter, useSegments } from "expo-router";
 import React, { useEffect } from "react";
-import auth, { FirebaseAuthTypes, onAuthStateChanged } from "@react-native-firebase/auth";
+import auth, { FirebaseAuthTypes, getAuth, onAuthStateChanged } from "@react-native-firebase/auth";
+import { firebase } from "@react-native-firebase/auth";
 
 export default function RootLayout(){
     const [initializing, setInitializing] = React.useState(true);
@@ -8,25 +9,31 @@ export default function RootLayout(){
     const router = useRouter();
     const segments = useSegments();
 
+    //const isAuth = getAuth();
     const onAuthStateChanged = (user) => {
-        setUser(user);
-        if (initializing) setInitializing(false);
+        setUser(user)        
+        if (initializing) setInitializing(false)
     }
 
     useEffect(()=>{
         const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+        const unsubscribe = auth().onAuthStateChanged((user) => {
+            if(!user){
+                router.replace('/')
+            }
+        })
         return subscriber;
     }, []);
 
     useEffect(() => {
         if(initializing) return;
 
-        const inAuthGroup = segments[0] === './(auth)r';
+        const inAuthGroup = segments[0] === '/(auth)';
 
         if(user && !inAuthGroup) {
-            router.replace('./(auth)/app');
-        } else if(!user && inAuthGroup) {
-            router.replace('./');
+            router.replace('/(auth)/app');
+        } else if(!user && !inAuthGroup) {
+            router.replace('/');
         }
 
     }, [user, initializing]);
