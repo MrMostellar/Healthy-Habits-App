@@ -5,10 +5,10 @@
     "slug": "HealthyHabits",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,12 +21,12 @@
       "googleServicesFile": "C:/Users/mrmos/OneDrive/Desktop/Healthy_Habits_App/google-services.json",
       "package": "com.stellarTech.healthyHabits",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png"
     },
     "plugins": [
       "@react-native-firebase/app",
@@ -40,7 +40,9 @@
           }
         }
       ],
-      "expo-router"
+      "expo-router",
+      "expo-asset",
+      "expo-font"
     ]
   }
 }

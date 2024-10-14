@@ -8,13 +8,20 @@ export default function TabLayout(){
                 tabBarActiveBackgroundColor: "#66666f",
                 tabBarInactiveBackgroundColor: "#fff",
                 headerTitleAlign: "center",
-                tabBarShowLabel: false,
+                tabBarShowLabel: true,
                 }}>
             <Tabs.Screen name="app" 
             options={{
                 title: 'Home',
                 tabBarIcon: () => <Ionicons name="home" size={30}/>
             }}/>
+
+            <Tabs.Screen name="cookbook" 
+            options={{
+                title: 'Cookbook',
+                tabBarIcon: () => <Ionicons name="book" size={30}/>,
+            }}/>
+
             <Tabs.Screen name="settings" 
             options={{
                 title: 'Settings',
