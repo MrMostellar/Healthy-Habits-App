@@ -5,26 +5,35 @@ import Logo from "../components/Logo";
 import CustomButton from "../components/CustomButton";
 import auth from '@react-native-firebase/auth';
 
+
 export default function Index(){
-  const [email, setEmail] = React.useState('')
-  const [user, setUser] = React.useState('')
-  const [pass, setPass] = React.useState('')
-  const [isSignedIn, setIsSignedIn] = React.useState(true)
-  const [isLoading, setIsLoading] = React.useState(false)
-  const [error, setError] = React.useState(false)
+    const [email, setEmail] = React.useState('')
+    const [user, setUser] = React.useState('')
+    const [pass, setPass] = React.useState('')
+    const [isSignedIn, setIsSignedIn] = React.useState(true)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(false)
 
-  const signIn = async () => {
-    try{
-        await auth().signInWithEmailAndPassword(email, pass)
-        alert("signing in")
-    } catch(e){               
-        //render error on screen in a text component
-        setError(true)
-        console.log(e)
+    //const isLoading = () => {
+        //loading ?
+
+    //}
+
+    const signIn = async () => {
+        setLoading(true)
+        try{
+            await auth().signInWithEmailAndPassword(email, pass)
+        } catch(e){               
+            //render error on screen in a text component
+            setError(true)
+            console.log(e)
+        } finally{
+            setLoading(false)
+        }
     }
-  }
 
-  const signUp = async () => {    
+  const signUp = async () => {  
+    setLoading(true)  
     try{
         await auth().createUserWithEmailAndPassword(email, pass)
         alert('check your email')
@@ -33,6 +42,8 @@ export default function Index(){
         //render error on screen in a text component
         setError(true)
         console.log(e)
+    } finally{
+        setLoading(false)
     }
   }
 

@@ -5,24 +5,35 @@
     "slug": "HealthyHabits",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
+    "icon": "./assets/Healthy_Habits_ios.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
+      "image": "./assets/Healthy_Habits.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#211951"
     },
     "ios": {
       "googleServicesFile": "C:/Users/mrmos/OneDrive/Desktop/Healthy_Habits_App/GoogleService-Info.plist",
       "bundleIdentifier": "com.stellarTech.healthyHabits",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/Healthy_Habits_ios.png",
+      "splash": {
+        "image": "./assets/Healthy_Habits@3x.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#211951"
+      }
     },
     "android": {
       "googleServicesFile": "C:/Users/mrmos/OneDrive/Desktop/Healthy_Habits_App/google-services.json",
       "package": "com.stellarTech.healthyHabits",
       "adaptiveIcon": {
-        "foregroundImage": "../Healthy_Habits_Assets/Logo/Healthy_Habits.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/Healthy_Habits_Android.png",
+        "backgroundColor": "#211951"
+      },
+      "splash": {
+        "image": "./assets/Healthy_Habits_XL_Android.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#211951"
       }
     },
     "web": {
