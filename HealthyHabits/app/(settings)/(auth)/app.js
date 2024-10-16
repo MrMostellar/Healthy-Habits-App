@@ -2,6 +2,8 @@ import { Text, View, ScrollView, ScrollViewComponent, Pressable } from 'react-na
 import { ExpoRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import auth, { getAuth } from '@react-native-firebase/auth';
+import Card from '../../../components/Card';
+import Renderer from '../../../components/Renderer';
 
 
 export default function App() {
@@ -11,15 +13,8 @@ export default function App() {
   return (
     <SafeAreaView>
         <ScrollView>
-          <View className="items-center">
-              {/*test to see if the logic is working for firebase
-              <Pressable 
-                className="bg-black"
-                onPress={() => {alert(user)}}
-              >
-              <Text> </Text>
-              </Pressable>
-              */}
+          <View className="flex-row justify-around flex-wrap">
+            <Renderer/>
           </View>
         </ScrollView>
     </SafeAreaView>

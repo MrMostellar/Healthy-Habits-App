@@ -2,6 +2,8 @@ import { Stack, useRouter, useSegments } from "expo-router";
 import React, { useEffect } from "react";
 import auth, { FirebaseAuthTypes, getAuth, onAuthStateChanged } from "@react-native-firebase/auth";
 import { firebase } from "@react-native-firebase/auth";
+import { View, Text } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function RootLayout(){
     const [initializing, setInitializing] = React.useState(true);
@@ -39,10 +41,13 @@ export default function RootLayout(){
     }, [user, initializing]);
 
     return(
-        <Stack screenOptions={{headerShown: false}}>
-            <Stack.Screen name="(auth)" 
+        <Stack screenOptions={{
+            headerShown: false           
+        }}
+        >
+            <Stack.Screen name="(settings)" 
                 options={{
-                    headerShown: false,
+                    headerShown: false
                 }} 
             />
         </Stack>

@@ -1,5 +1,4 @@
-import React from "react";
-import { Tabs } from "expo-router";
+import { Tabs, Drawer } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout(){
@@ -7,9 +6,9 @@ export default function TabLayout(){
         <Tabs screenOptions={{
                 tabBarActiveBackgroundColor: "#66666f",
                 tabBarInactiveBackgroundColor: "#fff",
-                headerTitleAlign: "center",
+                headerShown: false,
                 tabBarShowLabel: true,
-                }}>
+        }}>
             <Tabs.Screen name="app" 
             options={{
                 title: 'Home',
@@ -20,12 +19,6 @@ export default function TabLayout(){
             options={{
                 title: 'Cookbook',
                 tabBarIcon: () => <Ionicons name="book" size={30}/>,
-            }}/>
-
-            <Tabs.Screen name="settings" 
-            options={{
-                title: 'Settings',
-                tabBarIcon: () => <Ionicons name="settings" size={30}/>,
             }}/>
         </Tabs>
     )
