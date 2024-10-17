@@ -30,10 +30,10 @@ export default function RootLayout(){
     useEffect(() => {
         if(initializing) return;
 
-        const inAuthGroup = segments[0] === '/(auth)';
+        const inAuthGroup = segments[0] === '/(settings)/';
 
         if(user && !inAuthGroup) {
-            router.replace('/(auth)/app');
+            router.replace('/(settings)/(auth)/app');
         } else if(!user && !inAuthGroup) {
             router.replace('/');
         }
