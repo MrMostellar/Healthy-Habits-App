@@ -1,14 +1,17 @@
-import { Tabs, Drawer } from "expo-router";
+import { Tabs, Drawer, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Button } from "react-native";
+import AccountBubble from "../../../components/AccountBubble";
+import DrawerLayout from "../_layout";
 
 export default function TabLayout(){
     return(
         <Tabs screenOptions={{
-                tabBarActiveBackgroundColor: "#66666f",
-                tabBarInactiveBackgroundColor: "#fff",
-                headerShown: false,
+
                 tabBarShowLabel: true,
-        }}>
+                headerShown: false
+            }}
+        >
             <Tabs.Screen name="app" 
             options={{
                 title: 'Home',
@@ -20,6 +23,12 @@ export default function TabLayout(){
                 title: 'Cookbook',
                 tabBarIcon: () => <Ionicons name="book" size={30}/>,
             }}/>
+
+            <Tabs.Screen name="(recipe)"
+            options={{
+                href: null
+            }}/>
+
         </Tabs>
     )
 }

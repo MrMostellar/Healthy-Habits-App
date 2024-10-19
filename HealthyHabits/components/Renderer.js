@@ -26,7 +26,7 @@ return (
             className="items-center justify-center bg-gray-700 rounded-3xl border-gray-200 my-1.5 mx-1.5 w-48 h-48"
             onPress={() => {
                 router.push({
-                    pathname:'/(recipe)/[recipe]',
+                    pathname:'/(settings)/(auth)/(recipe)/[recipe]',
                     params: {
                         recipe: card.title,
                         ingredients: card.ingredients,

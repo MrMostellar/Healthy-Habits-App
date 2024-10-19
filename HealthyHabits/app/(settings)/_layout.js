@@ -9,30 +9,27 @@ export default function DrawerLayout() {
         <GestureHandlerRootView style={{ flex: 1}}>
             <Drawer
                 screenOptions={{
-                    headerTitle: "",
-                    headerBackground: () => <AccountBubble/>,
-                    headerBackgroundContainerStyle: {alignItems: "flex-end"},
+                    headerShown: true,
+                    headerTitle: 'Healthy Habits',
+                    headerTitleAlign: 'center',
+                    tabBarActiveBackgroundColor: "#66666f",
+                    tabBarInactiveBackgroundColor: "#fff",
+                    headerRight: () => <AccountBubble/>,
                 }}
             >
-                <Drawer.Screen name='(auth)'
+                <Drawer.Screen name='profile'
                     options={{
-                        drawerLabel: 'Home'
+                        drawerLabel: 'Profile'
                     }}
                 />
 
                 <Drawer.Screen name='settings'
                     options={{
                         drawerLabel: 'Settings',
-                        headerTitle: "Settings",
                     }}
                 />
 
-                <Drawer.Screen name='profile'
-                    options={{
-                        drawerLabel: 'Profile'
-                    }}
-                />
-                <Drawer.Screen name='(recipe)'
+                <Drawer.Screen name='(auth)'
                     options={{
                         drawerItemStyle: {display: 'none'}
                     }}

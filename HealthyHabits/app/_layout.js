@@ -30,10 +30,10 @@ export default function RootLayout(){
     useEffect(() => {
         if(initializing) return;
 
-        const inAuthGroup = segments[0] === '/(settings)/';
+        const inAuthGroup = segments[0] === '/(auth)/';
 
         if(user && !inAuthGroup) {
-            router.replace('/(settings)/(auth)/app');
+            router.replace('/(auth)/app');
         } else if(!user && !inAuthGroup) {
             router.replace('/');
         }
@@ -50,7 +50,6 @@ export default function RootLayout(){
                     headerShown: false
                 }} 
             />
-            <Stack.Screen name="(recipe)"/>
         </Stack>
     )
 }
