@@ -5,7 +5,6 @@ import Logo from "../components/Logo";
 import CustomButton from "../components/CustomButton";
 import auth from '@react-native-firebase/auth';
 
-
 export default function Index(){
     const [email, setEmail] = React.useState('')
     const [user, setUser] = React.useState('')
@@ -13,11 +12,6 @@ export default function Index(){
     const [isSignedIn, setIsSignedIn] = React.useState(true)
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(false)
-
-    //const isLoading = () => {
-        //loading ?
-
-    //}
 
     const signIn = async () => {
         setLoading(true)

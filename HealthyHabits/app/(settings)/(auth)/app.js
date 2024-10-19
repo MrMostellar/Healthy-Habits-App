@@ -2,7 +2,6 @@ import { Text, View, ScrollView, ScrollViewComponent, Pressable } from 'react-na
 import { ExpoRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import auth, { getAuth } from '@react-native-firebase/auth';
-import Card from '../../../components/Card';
 import Renderer from '../../../components/Renderer';
 
 

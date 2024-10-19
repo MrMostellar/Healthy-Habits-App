@@ -9,9 +9,9 @@ export default function DrawerLayout() {
         <GestureHandlerRootView style={{ flex: 1}}>
             <Drawer
                 screenOptions={{
-                    headerTitle: '',
-                headerBackground: () => <AccountBubble/>,
-                headerBackgroundContainerStyle: {alignItems: "flex-end"},
+                    headerTitle: "",
+                    headerBackground: () => <AccountBubble/>,
+                    headerBackgroundContainerStyle: {alignItems: "flex-end"},
                 }}
             >
                 <Drawer.Screen name='(auth)'
@@ -30,6 +30,11 @@ export default function DrawerLayout() {
                 <Drawer.Screen name='profile'
                     options={{
                         drawerLabel: 'Profile'
+                    }}
+                />
+                <Drawer.Screen name='(recipe)'
+                    options={{
+                        drawerItemStyle: {display: 'none'}
                     }}
                 />
             </Drawer>
