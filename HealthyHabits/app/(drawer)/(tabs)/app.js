@@ -1,8 +1,9 @@
-import { Text, View, ScrollView, ScrollViewComponent, Pressable } from 'react-native';
+import { Text, View, ScrollView, ScrollViewComponent, Pressable, Image } from 'react-native';
 import { ExpoRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import auth, { getAuth } from '@react-native-firebase/auth';
+import { Asset } from 'expo-asset';
 import Renderer from '../../../components/Renderer';
+import Logo from '../../../components/Logo';
 
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
   const user = auth().currentUser.email
   */
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-brandBackground">
         <ScrollView>
           <View className="flex-row justify-around flex-wrap">
             <Renderer/>

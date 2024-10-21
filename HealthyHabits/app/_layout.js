@@ -4,6 +4,8 @@ import auth, { FirebaseAuthTypes, getAuth, onAuthStateChanged } from "@react-nat
 import { firebase } from "@react-native-firebase/auth";
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { ReactNativeFirebase } from "@react-native-firebase/app";
+import Drawer from "expo-router/drawer";
 
 export default function RootLayout(){
     const [initializing, setInitializing] = React.useState(true);
@@ -30,22 +32,20 @@ export default function RootLayout(){
     useEffect(() => {
         if(initializing) return;
 
-        const inAuthGroup = segments[0] === '/(auth)/';
+        const inAuthGroup = segments[0] === '/(drawer)';
 
         if(user && !inAuthGroup) {
-            router.replace('/(auth)/app');
+            router.replace('/(drawer)/(tabs)/app');
         } else if(!user && !inAuthGroup) {
             router.replace('/');
         }
-
     }, [user, initializing]);
 
     return(
-        <Stack screenOptions={{
-            headerShown: false           
+        <Stack screenOptions={{             
         }}
         >
-            <Stack.Screen name="(settings)" 
+            <Stack.Screen name="(drawer)" 
                 options={{
                     headerShown: false
                 }} 

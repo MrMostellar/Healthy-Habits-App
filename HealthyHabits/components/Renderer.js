@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Pressable } from 'react-native'
+import { Text, View, Pressable, StyleSheet } from 'react-native'
 import { router, usePathname } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -23,10 +23,11 @@ return (
     data.map((card, key) => 
         <Pressable
             key={key} 
-            className="items-center justify-center bg-gray-700 rounded-3xl border-gray-200 my-1.5 mx-1.5 w-48 h-48"
+            style={styles.border}
+            className="items-center justify-center my-1.5 mx-1.5 w-48 h-48"
             onPress={() => {
                 router.push({
-                    pathname:'/(settings)/(auth)/(recipe)/[recipe]',
+                    pathname:'/(drawer)/(tabs)/(recipe)/[recipe]',
                     params: {
                         recipe: card.title,
                         ingredients: card.ingredients,
@@ -39,3 +40,10 @@ return (
         </Pressable>
     )
 )}
+const styles = StyleSheet.create({
+    border: {
+        borderColor: "#35a29f",
+        borderWidth: 0.3,
+        borderRadius: 35
+    }
+})
